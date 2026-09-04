@@ -1,1 +1,354 @@
- <html contenteditable>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCS SEAS Offsite 2026 | Mission Moonshot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#1A73E8',
+                            dark: '#0D1117',
+                            accent: '#F9AB00',
+                            red: '#EA4335'
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "linear-gradient(to bottom, rgba(13, 17, 23, 0.8), rgba(13, 17, 23, 1)), url('https://placehold.co/1920x1080/0D1117/1A73E8?text=Space+Background')",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(26, 115, 232, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-gray-200 font-sans antialiased overflow-x-hidden selection:bg-brand-blue selection:text-white">
+
+    <nav class="fixed w-full z-50 glass-panel py-4 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-14 h-14 flex items-center justify-center group-hover:scale-110 transition-transform drop-shadow-md">
+                    <img src="AW_GCS_26_LockUP_Final.png" alt="Mission Moonshot Logo" class="object-contain w-full h-full">
+                </div>
+                <span class="font-display font-bold text-xl tracking-tight hidden sm:block">GCS SEAS <span class="text-brand-blue">2026</span></span>
+            </a>
+            <div class="hidden md:flex gap-8 font-medium text-sm">
+                <a href="#agenda" class="hover:text-brand-blue transition-colors">Agenda</a>
+                <a href="#swag" class="hover:text-brand-blue transition-colors">Welcome Kit</a>
+                <a href="#activities" class="hover:text-brand-blue transition-colors">Activities</a>
+                <a href="#gala" class="hover:text-brand-blue transition-colors">Gala Dinner</a>
+            </div>
+            <a href="#register" class="bg-brand-blue hover:bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold transition-all shadow-[0_0_15px_rgba(26,115,232,0.4)] hover:shadow-[0_0_25px_rgba(26,115,232,0.6)]">
+                Event Info
+            </a>
+        </div>
+    </nav>
+
+    <header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-hero-pattern bg-cover bg-center bg-no-repeat bg-fixed">
+        <!-- Abstract glowing elements -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-blue rounded-full mix-blend-screen filter blur-[120px] opacity-30 animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-accent rounded-full mix-blend-screen filter blur-[120px] opacity-20"></div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center flex flex-col items-center">
+            <div class="mb-8 inline-block animate-bounce" style="animation-duration: 3s;">
+                <span class="bg-gray-800/80 border border-gray-700 text-brand-accent text-xs font-bold px-4 py-1.5 rounded-full tracking-widest uppercase">
+                    Bangkok, Thailand
+                </span>
+            </div>
+            
+            <img src="AW_GCS_26_LockUP_Final.png" alt="Mission Moonshot Logo" class="max-w-[300px] md:max-w-[450px] mx-auto mb-8 drop-shadow-[0_0_30px_rgba(255,255,255,0.15)] transition-transform duration-500 hover:scale-105">
+
+            <h1 class="font-display text-5xl md:text-7xl font-bold mb-6 tracking-tighter text-white text-glow">
+                SEAS TIGERS <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-blue-400">MISSION MOONSHOT</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Join us for the GCS SEAS Offsite 2026. Prepare for three days of business alignment, team-building, and celebration as we launch our next big initiatives.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#agenda" class="bg-white text-brand-dark px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
+                    View Master Agenda
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="agenda" class="py-24 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-white mb-4">Master Agenda</h2>
+                <div class="h-1 w-20 bg-brand-blue mx-auto rounded-full"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="glass-panel rounded-2xl overflow-hidden shadow-2xl">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-800/50 text-gray-300 border-b border-gray-700/50 font-display">
+                                <th class="py-4 px-6 font-semibold w-1/4">Date</th>
+                                <th class="py-4 px-6 font-semibold w-1/4">Time</th>
+                                <th class="py-4 px-6 font-semibold">Session</th>
+                                <th class="py-4 px-6 font-semibold">Place</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-800/50">
+                            <tr class="hover:bg-white/5 transition-colors group">
+                                <td class="py-5 px-6 font-medium text-white group-hover:text-brand-blue transition-colors" rowspan="2">Sep 09</td>
+                                <td class="py-5 px-6 text-gray-400">3:00 PM - 5:00 PM</td>
+                                <td class="py-5 px-6 text-gray-300">Check-in hotel & receive welcome gift</td>
+                                <td class="py-5 px-6 text-gray-400">Athenee Hotel</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="py-5 px-6 text-gray-400">5:30 PM - 8:40 PM</td>
+                                <td class="py-5 px-6 text-gray-300 font-medium"><span class="inline-flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-brand-accent"></div> Welcome Dinner</span></td>
+                                <td class="py-5 px-6 text-gray-400">The Front Room restaurant</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors group">
+                                <td class="py-5 px-6 font-medium text-white group-hover:text-brand-blue transition-colors border-t border-gray-800/50" rowspan="3">Sep 10</td>
+                                <td class="py-5 px-6 text-gray-400 border-t border-gray-800/50">9:00 AM - 1:00 PM</td>
+                                <td class="py-5 px-6 text-gray-300 border-t border-gray-800/50">Business Session</td>
+                                <td class="py-5 px-6 text-gray-400 border-t border-gray-800/50">Google BKK Office</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="py-5 px-6 text-gray-400">3:00 PM - 5:30 PM</td>
+                                <td class="py-5 px-6 text-gray-300 font-medium"><span class="inline-flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-brand-blue"></div> Team Fun Activity - SEA Tigers Cage</span></td>
+                                <td class="py-5 px-6 text-gray-400">Athenee Hotel</td>
+                            </tr>
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="py-5 px-6 text-gray-400">6:30 PM - 10:30 PM</td>
+                                <td class="py-5 px-6 text-brand-accent font-semibold tracking-wide uppercase text-sm">Gala Dinner</td>
+                                <td class="py-5 px-6 text-gray-400">Athenee Hotel</td>
+                            </tr>
+                             <tr class="hover:bg-white/5 transition-colors group">
+                                <td class="py-5 px-6 font-medium text-white group-hover:text-brand-blue transition-colors border-t border-gray-800/50">Sep 11</td>
+                                <td class="py-5 px-6 text-gray-400 border-t border-gray-800/50">9:30 AM - 12:00 PM</td>
+                                <td class="py-5 px-6 text-gray-300 border-t border-gray-800/50">AMA & People Session</td>
+                                <td class="py-5 px-6 text-gray-400 border-t border-gray-800/50">Google BKK Office</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="swag" class="py-24 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2">
+                    <h2 class="font-display text-3xl md:text-5xl font-bold text-white mb-6">Mission Moonshot <br/><span class="text-brand-blue">Welcome Kit</span></h2>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                        Prepare for launch! Upon check-in at the Athenee Hotel, every attendee will receive an exclusive gear package designed for our 2026 offsite.
+                    </p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 bg-brand-blue/20 p-2 rounded-lg text-brand-blue">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Canvas Bag & Packaging</h4>
+                                <p class="text-sm text-gray-400">Custom branded tote for your daily missions.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 bg-brand-accent/20 p-2 rounded-lg text-brand-accent">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Official SEAS TIGERS Jacket</h4>
+                                <p class="text-sm text-gray-400">Premium varsity style jacket featuring 'J' on the front.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 bg-green-500/20 p-2 rounded-lg text-green-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Local Thai Essentials</h4>
+                                <p class="text-sm text-gray-400">Comfortable Thai Elephant Pants and traditional Thai Inhaler.</p>
+                            </div>
+                        </li>
+                         <li class="flex items-start gap-4">
+                            <div class="mt-1 bg-purple-500/20 p-2 rounded-lg text-purple-400">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-white">Event Credentials</h4>
+                                <p class="text-sm text-gray-400">Tag Card and custom Die-cut Sticker (1 per pax).</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 relative">
+                     <div class="absolute inset-0 bg-gradient-to-tr from-brand-blue/20 to-transparent rounded-3xl transform rotate-3 blur-xl"></div>
+                     <div class="glass-panel p-6 rounded-3xl relative">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-gray-800 rounded-xl p-4 flex flex-col items-center justify-center min-h-[150px]">
+                                <span class="text-xs text-gray-400 uppercase tracking-wider mb-2 font-semibold">Official Apparel</span>
+                                <div class="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mb-2">👕</div>
+                                <span class="font-display font-medium text-center text-sm">SEAS TIGERS Jacket</span>
+                            </div>
+                             <div class="bg-gray-800 rounded-xl p-4 flex flex-col items-center justify-center min-h-[150px]">
+                                 <span class="text-xs text-gray-400 uppercase tracking-wider mb-2 font-semibold">Local Vibe</span>
+                                <div class="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mb-2">🐘</div>
+                                <span class="font-display font-medium text-center text-sm">Elephant Pants</span>
+                            </div>
+                            <div class="bg-gray-800 rounded-xl p-4 flex flex-col items-center justify-center min-h-[150px] col-span-2 relative overflow-hidden">
+                                <div class="absolute right-0 bottom-0 opacity-10">
+                                    <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13.5h-13L12 6.5z"/></svg>
+                                </div>
+                                <span class="text-xs text-brand-blue uppercase tracking-wider mb-2 font-bold">Exclusive Swag</span>
+                                <h3 class="font-display font-bold text-xl text-white">Full Canvas Bag Kit</h3>
+                                <p class="text-xs text-gray-400 mt-2">Pick up at Athenee Hotel Check-in</p>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="activities" class="py-24 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+             <div class="text-center mb-16">
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-white mb-4">Competitions & <span class="text-brand-accent">Gala</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Get ready to pitch, perform, and dress to impress. We have exciting challenges planned with amazing prizes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Activity 1 -->
+                <div class="glass-panel p-8 rounded-2xl border-t-4 border-t-brand-blue hover:-translate-y-1 transition-transform duration-300">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="font-display text-2xl font-bold text-white">SEA Tigers Cage</h3>
+                        <span class="bg-brand-blue/20 text-brand-blue text-xs font-bold px-3 py-1 rounded-full">Pitch Stage</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">Our premier team offsite fun activity. Face the judges and present your best ideas in the Tigers Cage!</p>
+                    <div class="bg-gray-800/50 p-4 rounded-xl border border-gray-700/50">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-2">🏆 Winning Team Prize</p>
+                        <p class="text-sm font-medium text-gray-200">Premium handmade leather luggage tag with hand-drawn Mission Moonshot Logo.</p>
+                    </div>
+                </div>
+
+                <!-- Activity 2 -->
+                <div class="glass-panel p-8 rounded-2xl border-t-4 border-t-brand-accent hover:-translate-y-1 transition-transform duration-300">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="font-display text-2xl font-bold text-white">Moonshot Competition</h3>
+                        <span class="bg-brand-accent/20 text-brand-accent text-xs font-bold px-3 py-1 rounded-full">Market Level</span>
+                    </div>
+                    <div class="space-y-4 mb-6">
+                        <div>
+                            <p class="text-xs font-semibold text-gray-300 mb-1">Before the Event:</p>
+                            <p class="text-sm text-gray-400">Use Gemini / Google AI to create a short video (&lt;2 mins) introducing your team & moonshot goal.</p>
+                        </div>
+                        <div>
+                            <p class="text-xs font-semibold text-gray-300 mb-1">During the Gala:</p>
+                            <p class="text-sm text-gray-400">Deliver a quick presentation explaining your ideas and story. (Dress up to match your theme optional!)</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800/50 p-4 rounded-xl border border-gray-700/50">
+                        <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-2">🏆 Winning Country Prize</p>
+                        <p class="text-sm font-medium text-brand-accent flex items-center gap-2"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path></svg> The Official Moonshot Challenge Trophy</p>
+                    </div>
+                </div>
+
+                <!-- Activity 3 -->
+                <div class="glass-panel p-8 rounded-2xl md:col-span-2 bg-gradient-to-br from-gray-800/50 to-gray-900/80 border border-gray-700/50 relative overflow-hidden">
+                    <!-- Decorative Stars -->
+                    <div class="absolute top-4 right-8 text-yellow-500/20 text-4xl">✨</div>
+                    <div class="absolute bottom-8 right-24 text-blue-500/20 text-6xl">🌟</div>
+
+                    <div class="md:w-2/3 relative z-10">
+                        <div class="inline-block bg-purple-500/20 text-purple-400 text-xs font-bold px-3 py-1 rounded-full mb-4">Gala Dinner Highlights</div>
+                        <h3 class="font-display text-3xl font-bold text-white mb-4">GCS Got Talent & Best Dressed</h3>
+                        <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                            Bring your energy for a short, fun performance (singing, dancing, comedy - max 3 mins). Plus, dress your best for the Gala to win!
+                        </p>
+                        
+                        <div class="grid sm:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-black/30 p-4 rounded-xl border border-white/5">
+                                <h4 class="text-sm font-semibold text-white mb-2 text-center border-b border-gray-700 pb-2">GCS Got Talent Prizes</h4>
+                                <ul class="text-xs text-gray-400 space-y-2">
+                                    <li><span class="text-yellow-500 font-bold">1st:</span> Table Light Trophy + $250</li>
+                                    <li><span class="text-gray-300 font-bold">2nd:</span> Table Light + $100</li>
+                                    <li><span class="text-orange-400 font-bold">Rest:</span> 3 Souvenir gift set each</li>
+                                </ul>
+                            </div>
+                            <div class="bg-black/30 p-4 rounded-xl border border-white/5 flex flex-col justify-center text-center">
+                                 <h4 class="text-sm font-semibold text-white mb-2 border-b border-gray-700 pb-2">Best Dressed</h4>
+                                 <p class="text-xs text-gray-400 mb-2">Dress to impress at the Gala!</p>
+                                 <p class="text-sm font-bold text-brand-blue">2 Moonshot Table Lights<br><span class="text-xs font-normal text-gray-500">(1 Male, 1 Female)</span></p>
+                            </div>
+                        </div>
+
+                        <div class="bg-brand-blue/10 border border-brand-blue/30 rounded-lg p-4 inline-block">
+                            <p class="text-sm text-gray-300 flex items-center gap-2">
+                                <svg class="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <strong>Action Required:</strong> Interested in performing? Email <a href="mailto:gcs-bkk-offsite@google.com" class="text-brand-blue hover:underline font-medium">gcs-bkk-offsite@google.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-gray-800 bg-gray-900 pt-16 pb-8">
+        <div class="container mx-auto px-6 text-center">
+            <img src="AW_GCS_26_LockUP_Final.png" alt="Mission Moonshot Logo" class="w-32 mx-auto mb-6 opacity-80 grayscale hover:grayscale-0 transition-all duration-300 drop-shadow-md">
+            <h2 class="font-display font-bold text-xl text-white tracking-widest uppercase mb-2">Mission Moonshot</h2>
+            <p class="text-gray-500 text-sm mb-8">GCS SEAS Offsite 2026 • Bangkok</p>
+            
+            <div class="text-xs text-gray-600 border-t border-gray-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2026 Google Customer Solutions SEAS. Internal use only.</p>
+                <div class="mt-4 md:mt-0 space-x-4">
+                    <a href="#" class="hover:text-gray-300 transition-colors">Event Support</a>
+                    <a href="mailto:gcs-bkk-offsite@google.com" class="hover:text-gray-300 transition-colors">Contact Team</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple navbar background change on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-brand-dark/90', 'shadow-lg');
+                nav.classList.remove('py-4');
+                nav.classList.add('py-2');
+            } else {
+                nav.classList.remove('bg-brand-dark/90', 'shadow-lg');
+                nav.classList.remove('py-2');
+                nav.classList.add('py-4');
+            }
+        });
+    </script>
+</body>
+</html>
